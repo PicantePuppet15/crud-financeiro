@@ -32,22 +32,17 @@ npm install
 
 Este projeto utiliza **Prisma com SQLite**. Siga os passos abaixo para configurar o banco:
 
-1. Inicialize o Prisma:
-```bash
-npx prisma init
-```
-
-2. No arquivo `.env`, configure a URL do banco:
+1. Crie um arquivo `.env`, configure a URL do banco:
 ```bash
 DATABASE_URL="file:./dev.db"
 ```
 
-3. Crie e aplique as migrações:
+2. Crie e aplique as migrações:
 ```bash
 npx prisma migrate dev --name init
 ```
 
-4. Gere o cliente Prisma:
+3. Gere o cliente Prisma:
 ```bash
 npx prisma generate
 ```
