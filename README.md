@@ -26,6 +26,8 @@ cd crud-financeiro
 npm install
 ```
 
+---
+
 ## 🗃️ Configuração do Banco de Dados
 
 Este projeto utiliza **Prisma com SQLite**. Siga os passos abaixo para configurar o banco:
@@ -50,6 +52,8 @@ npx prisma migrate dev --name init
 npx prisma generate
 ```
 
+---
+
 ## ▶️ Executando o Projeto
 
 Para rodar o projeto em ambiente de desenvolvimento:
@@ -58,6 +62,8 @@ Para rodar o projeto em ambiente de desenvolvimento:
 npm run dev
 ```
 Abra no navegador: http://localhost:8080
+
+---
 
 ## 📌 Funcionalidades
  
