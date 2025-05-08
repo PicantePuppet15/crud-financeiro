@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💸 App de Finanças - CRUD com Next.js e Prisma
 
-## Getting Started
+Este é um aplicativo simples de controle financeiro, onde é possível cadastrar entradas e saídas, editar, excluir e visualizar transações. A aplicação foi construída com foco em aprendizado de backend utilizando o App Router do Next.js e Prisma ORM.
 
-First, run the development server:
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- [Next.js (App Router)](https://nextjs.org/docs/app)
+- [React](https://reactjs.org/)
+- [Prisma ORM](https://www.prisma.io/docs)
+- [SQLite](https://www.sqlite.org/index.html)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Zod](https://zod.dev/)
+- [React Hook Form](https://react-hook-form.com/)
+
+---
+
+## 📦 Instalação
+
+Clone o repositório e instale as dependências:
+
+```bash
+git clone https://github.com/PicantePuppet15/crud-financeiro.git
+cd crud-financeiro
+npm install
+```
+
+## 🗃️ Configuração do Banco de Dados
+
+Este projeto utiliza **Prisma com SQLite**. Siga os passos abaixo para configurar o banco:
+
+1. Inicialize o Prisma:
+```bash
+npx prisma init
+```
+
+2. No arquivo `.env`, configure a URL do banco:
+```bash
+DATABASE_URL="file:./dev.db"
+```
+
+3. Crie e aplique as migrações:
+```bash
+npx prisma migrate dev --name init
+```
+
+4. Gere o cliente Prisma:
+```bash
+npx prisma generate
+```
+
+## ▶️ Executando o Projeto
+
+Para rodar o projeto em ambiente de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Abra no navegador: http://localhost:8080
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌 Funcionalidades
+ 
+- Criar transações (entrada e saída)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Listar transações
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Editar transações
 
-## Learn More
+- Deletar transações
 
-To learn more about Next.js, take a look at the following resources:
+- Validação de formulários com Zod
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Estilização com Tailwind CSS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
